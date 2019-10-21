@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>注册，登录与鉴权 | Weitanai</title>
+    <meta name="description" content="Rock And Roll">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.5c38130e.css" as="style"><link rel="preload" href="/assets/js/app.4ed34284.js" as="script"><link rel="preload" href="/assets/js/2.179fc952.js" as="script"><link rel="preload" href="/assets/js/39.9322f78e.js" as="script"><link rel="prefetch" href="/assets/js/10.68dc8d53.js"><link rel="prefetch" href="/assets/js/11.832d96e7.js"><link rel="prefetch" href="/assets/js/12.33575e22.js"><link rel="prefetch" href="/assets/js/13.a044b60e.js"><link rel="prefetch" href="/assets/js/14.593fea9c.js"><link rel="prefetch" href="/assets/js/15.cad1522e.js"><link rel="prefetch" href="/assets/js/16.712b690b.js"><link rel="prefetch" href="/assets/js/17.cd78bb73.js"><link rel="prefetch" href="/assets/js/18.2debaf5f.js"><link rel="prefetch" href="/assets/js/19.f8de78ef.js"><link rel="prefetch" href="/assets/js/20.f0007b06.js"><link rel="prefetch" href="/assets/js/21.bfea6e70.js"><link rel="prefetch" href="/assets/js/22.d5f0398a.js"><link rel="prefetch" href="/assets/js/23.2ee85c93.js"><link rel="prefetch" href="/assets/js/24.d7b9c088.js"><link rel="prefetch" href="/assets/js/25.c0eecd02.js"><link rel="prefetch" href="/assets/js/26.f8eee9c5.js"><link rel="prefetch" href="/assets/js/27.b1ce073b.js"><link rel="prefetch" href="/assets/js/28.48df8e62.js"><link rel="prefetch" href="/assets/js/29.2f438cb0.js"><link rel="prefetch" href="/assets/js/3.8f4629bf.js"><link rel="prefetch" href="/assets/js/30.ec20a26d.js"><link rel="prefetch" href="/assets/js/31.ed3582c1.js"><link rel="prefetch" href="/assets/js/32.f57554e0.js"><link rel="prefetch" href="/assets/js/33.acdf3adf.js"><link rel="prefetch" href="/assets/js/34.fb00c414.js"><link rel="prefetch" href="/assets/js/35.e54e13a0.js"><link rel="prefetch" href="/assets/js/36.cab101c8.js"><link rel="prefetch" href="/assets/js/37.5bce502a.js"><link rel="prefetch" href="/assets/js/38.1f71117c.js"><link rel="prefetch" href="/assets/js/4.b253f392.js"><link rel="prefetch" href="/assets/js/40.a5a5bd97.js"><link rel="prefetch" href="/assets/js/5.b6a9313e.js"><link rel="prefetch" href="/assets/js/6.9ee5c745.js"><link rel="prefetch" href="/assets/js/7.2358918f.js"><link rel="prefetch" href="/assets/js/8.c2b664f0.js"><link rel="prefetch" href="/assets/js/9.56c8ec88.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.5c38130e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Weitanai</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/algorithm/" class="nav-link">算法</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端世界" class="dropdown-title"><span class="title">前端世界</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/javascript/" class="nav-link router-link-active">工程实践</a></li><li class="dropdown-item"><!----> <a href="/browser/" class="nav-link">浏览器</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/weitanai" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/algorithm/" class="nav-link">算法</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端世界" class="dropdown-title"><span class="title">前端世界</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/javascript/" class="nav-link router-link-active">工程实践</a></li><li class="dropdown-item"><!----> <a href="/browser/" class="nav-link">浏览器</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/weitanai" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/javascript/" class="sidebar-link">javascript的趋势</a></li><li><a href="/javascript/函数式编程.html" class="sidebar-link">函数式编程</a></li><li><a href="/javascript/webpack.html" class="sidebar-link">webpack</a></li><li><a href="/javascript/CICD.html" class="sidebar-link">CI/CD</a></li><li><a href="/javascript/PWA.html" class="sidebar-link">PWA</a></li><li><a href="/javascript/Docker.html" class="sidebar-link">Docker</a></li><li><a href="/javascript/Regular.html" class="sidebar-link">regular expression</a></li><li><a href="/javascript/中间件.html" class="sidebar-link">可复用中间件</a></li><li><a href="/javascript/发布与部署.html" class="sidebar-link">发布和部署 (阿里云)</a></li><li><a href="/javascript/注册登录鉴权.html" class="active sidebar-link">注册，登录与鉴权</a><ul class="sidebar-sub-headers"></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="注册，登录与鉴权"><a href="#注册，登录与鉴权" class="header-anchor">#</a> 注册，登录与鉴权</h1> <h3 id="_1-注册"><a href="#_1-注册" class="header-anchor">#</a> 1 注册</h3> <ul><li>数据库定义model</li> <li>后端写api 处理数据的储存与res; 对密码加密</li> <li>前端post数据到指定的api</li></ul> <h3 id="_2-登录"><a href="#_2-登录" class="header-anchor">#</a> 2 登录</h3> <p><img src="https://cdn.nlark.com/yuque/0/2019/png/388749/1571135386153-bf3f26ac-75c6-4c3b-9458-d3b69b0c9c2c.png" alt="img"></p> <ol><li>根据 req.body的username 找password;</li> <li>校验密码， 使用(bcrypt) 比较req的密码与找到的密码</li> <li>判断密码， 不符合重新登录， 符合返回token</li> <li>返回token,（jsonwebtoken）生成token , 参数(选取用户传入的数据， 后端的密匙字段)；</li> <li>全局错误处理函数， 统一处理让前后端都可以</li></ol> <div class="language-js extra-class"><pre class="language-js"><code>app<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/admin/api/login'</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> username<span class="token punctuation">,</span> password <span class="token punctuation">}</span> <span class="token operator">=</span> req<span class="token punctuation">.</span>body
+    <span class="token comment">// 1.根据用户名找用户</span>
+
+    <span class="token keyword">const</span> user <span class="token operator">=</span> <span class="token keyword">await</span> AdminUser<span class="token punctuation">.</span><span class="token function">findOne</span><span class="token punctuation">(</span><span class="token punctuation">{</span> username <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">select</span><span class="token punctuation">(</span><span class="token string">'+password'</span><span class="token punctuation">)</span>
+    <span class="token function">assert</span><span class="token punctuation">(</span>user<span class="token punctuation">,</span> <span class="token number">422</span><span class="token punctuation">,</span> <span class="token string">'用户不存在'</span><span class="token punctuation">)</span>
+    <span class="token comment">// 2.校验密码</span>
+    <span class="token keyword">const</span> isValid <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'bcrypt'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">compareSync</span><span class="token punctuation">(</span>password<span class="token punctuation">,</span> user<span class="token punctuation">.</span>password<span class="token punctuation">)</span>
+    <span class="token function">assert</span><span class="token punctuation">(</span>isValid<span class="token punctuation">,</span> <span class="token number">422</span><span class="token punctuation">,</span> <span class="token string">'密码错误'</span><span class="token punctuation">)</span>
+    <span class="token comment">// 3.返回token</span>
+    <span class="token keyword">const</span> token <span class="token operator">=</span> jwt<span class="token punctuation">.</span><span class="token function">sign</span><span class="token punctuation">(</span><span class="token punctuation">{</span> id<span class="token punctuation">:</span> user<span class="token punctuation">.</span>_id <span class="token punctuation">}</span><span class="token punctuation">,</span> app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'secret'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">{</span> token <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+  <span class="token comment">// 错误处理函数</span>
+  app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> req<span class="token punctuation">,</span> res<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// console.log(err)</span>
+    res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span>err<span class="token punctuation">.</span>statusCode <span class="token operator">||</span> <span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      message<span class="token punctuation">:</span> err<span class="token punctuation">.</span>message
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="_3-鉴权"><a href="#_3-鉴权" class="header-anchor">#</a> 3 鉴权</h3> <ul><li><p>需要登录才能访问资源， req.headers每次请求带token, 后端鉴定token的真实性。</p></li> <li><p>后端鉴权中间件</p></li></ul> <div class="language- extra-class"><pre class="language-text"><code>module.exports = options =&gt; {
+  const assert = require('http-assert')
+  const jwt = require('jsonwebtoken')
+  const AdminUser = require('../models/AdminUser')
+
+  return async (req, res, next) =&gt; {
+    const token = String(req.headers.authorization || '').split(' ').pop()
+    assert(token, 401, '请先登录')
+    // secret 是加密生成token时的密匙， 
+    const { id } = jwt.verify(token, req.app.get('secret'))
+    assert(id, 401, '请先登录')
+    req.user = await AdminUser.findById(id)
+    assert(req.user, 401, '请先登录')
+    await next()
+  }
+}
+</code></pre></div><ul><li>axios前端请求, 每次请求自动加上token.</li></ul> <div class="language- extra-class"><pre class="language-text"><code>http.interceptors.request.use(function (config) {
+  // Do something before request is sent
+  if (localStorage.token) {
+    config.headers.Authorization = 'Bearer ' + localStorage.token
+  }
+  return config;
+}, function (error) {
+  // Do something with request error
+  return Promise.reject(error);
+});
+</code></pre></div><h3 id="_4-错误处理"><a href="#_4-错误处理" class="header-anchor">#</a> 4 错误处理</h3> <ul><li>前后端约定接口和状态</li> <li>前端req 错误处理</li> <li>后端res错误处理</li> <li>前端res错误处理</li></ul> <div class="language-js extra-class"><pre class="language-js"><code>前端req 错误处理
+
+
+http<span class="token punctuation">.</span>interceptors<span class="token punctuation">.</span>request<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">config</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// Do something before request is sent</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>localStorage<span class="token punctuation">.</span>token<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    config<span class="token punctuation">.</span>headers<span class="token punctuation">.</span>Authorization <span class="token operator">=</span> <span class="token string">'Bearer '</span> <span class="token operator">+</span> localStorage<span class="token punctuation">.</span>token
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> config<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// Do something with request error</span>
+  <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">reject</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+
+后端res错误处理
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> req<span class="token punctuation">,</span> res<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// console.log(err)</span>
+    res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span>err<span class="token punctuation">.</span>statusCode <span class="token operator">||</span> <span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      message<span class="token punctuation">:</span> err<span class="token punctuation">.</span>message
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+
+前端res错误处理
+http<span class="token punctuation">.</span>interceptors<span class="token punctuation">.</span>response<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> res
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token parameter">err</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">.</span>response<span class="token punctuation">.</span>data<span class="token punctuation">.</span>message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Vue</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function">$message</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      type<span class="token punctuation">:</span> <span class="token string">'error'</span><span class="token punctuation">,</span>
+      message<span class="token punctuation">:</span> err<span class="token punctuation">.</span>response<span class="token punctuation">.</span>data<span class="token punctuation">.</span>message
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">.</span>response<span class="token punctuation">.</span>status <span class="token operator">===</span> <span class="token number">401</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">'/login'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  
+  <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">reject</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/javascript/发布与部署.html" class="prev">发布和部署 (阿里云)</a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.4ed34284.js" defer></script><script src="/assets/js/2.179fc952.js" defer></script><script src="/assets/js/39.9322f78e.js" defer></script>
+  </body>
+</html>

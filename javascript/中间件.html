@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>可复用中间件 | Weitanai</title>
+    <meta name="description" content="Rock And Roll">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.5c38130e.css" as="style"><link rel="preload" href="/assets/js/app.4ed34284.js" as="script"><link rel="preload" href="/assets/js/2.179fc952.js" as="script"><link rel="preload" href="/assets/js/36.cab101c8.js" as="script"><link rel="prefetch" href="/assets/js/10.68dc8d53.js"><link rel="prefetch" href="/assets/js/11.832d96e7.js"><link rel="prefetch" href="/assets/js/12.33575e22.js"><link rel="prefetch" href="/assets/js/13.a044b60e.js"><link rel="prefetch" href="/assets/js/14.593fea9c.js"><link rel="prefetch" href="/assets/js/15.cad1522e.js"><link rel="prefetch" href="/assets/js/16.712b690b.js"><link rel="prefetch" href="/assets/js/17.cd78bb73.js"><link rel="prefetch" href="/assets/js/18.2debaf5f.js"><link rel="prefetch" href="/assets/js/19.f8de78ef.js"><link rel="prefetch" href="/assets/js/20.f0007b06.js"><link rel="prefetch" href="/assets/js/21.bfea6e70.js"><link rel="prefetch" href="/assets/js/22.d5f0398a.js"><link rel="prefetch" href="/assets/js/23.2ee85c93.js"><link rel="prefetch" href="/assets/js/24.d7b9c088.js"><link rel="prefetch" href="/assets/js/25.c0eecd02.js"><link rel="prefetch" href="/assets/js/26.f8eee9c5.js"><link rel="prefetch" href="/assets/js/27.b1ce073b.js"><link rel="prefetch" href="/assets/js/28.48df8e62.js"><link rel="prefetch" href="/assets/js/29.2f438cb0.js"><link rel="prefetch" href="/assets/js/3.8f4629bf.js"><link rel="prefetch" href="/assets/js/30.ec20a26d.js"><link rel="prefetch" href="/assets/js/31.ed3582c1.js"><link rel="prefetch" href="/assets/js/32.f57554e0.js"><link rel="prefetch" href="/assets/js/33.acdf3adf.js"><link rel="prefetch" href="/assets/js/34.fb00c414.js"><link rel="prefetch" href="/assets/js/35.e54e13a0.js"><link rel="prefetch" href="/assets/js/37.5bce502a.js"><link rel="prefetch" href="/assets/js/38.1f71117c.js"><link rel="prefetch" href="/assets/js/39.9322f78e.js"><link rel="prefetch" href="/assets/js/4.b253f392.js"><link rel="prefetch" href="/assets/js/40.a5a5bd97.js"><link rel="prefetch" href="/assets/js/5.b6a9313e.js"><link rel="prefetch" href="/assets/js/6.9ee5c745.js"><link rel="prefetch" href="/assets/js/7.2358918f.js"><link rel="prefetch" href="/assets/js/8.c2b664f0.js"><link rel="prefetch" href="/assets/js/9.56c8ec88.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.5c38130e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Weitanai</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/algorithm/" class="nav-link">算法</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端世界" class="dropdown-title"><span class="title">前端世界</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/javascript/" class="nav-link router-link-active">工程实践</a></li><li class="dropdown-item"><!----> <a href="/browser/" class="nav-link">浏览器</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/weitanai" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/algorithm/" class="nav-link">算法</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端世界" class="dropdown-title"><span class="title">前端世界</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/javascript/" class="nav-link router-link-active">工程实践</a></li><li class="dropdown-item"><!----> <a href="/browser/" class="nav-link">浏览器</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/weitanai" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/javascript/" class="sidebar-link">javascript的趋势</a></li><li><a href="/javascript/函数式编程.html" class="sidebar-link">函数式编程</a></li><li><a href="/javascript/webpack.html" class="sidebar-link">webpack</a></li><li><a href="/javascript/CICD.html" class="sidebar-link">CI/CD</a></li><li><a href="/javascript/PWA.html" class="sidebar-link">PWA</a></li><li><a href="/javascript/Docker.html" class="sidebar-link">Docker</a></li><li><a href="/javascript/Regular.html" class="sidebar-link">regular expression</a></li><li><a href="/javascript/中间件.html" class="active sidebar-link">可复用中间件</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/javascript/发布与部署.html" class="sidebar-link">发布和部署 (阿里云)</a></li><li><a href="/javascript/注册登录鉴权.html" class="sidebar-link">注册，登录与鉴权</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="可复用中间件"><a href="#可复用中间件" class="header-anchor">#</a> 可复用中间件</h1> <h3 id="_1-通用crud接口"><a href="#_1-通用crud接口" class="header-anchor">#</a> 1 通用CRUD接口</h3> <ul><li>通用性</li> <li>可扩展性</li></ul> <div class="language- extra-class"><pre class="language-text"><code>// 后端 api, 把不同url 当作
+
+module.exports = options =&gt; {
+  return async (req, res, next) =&gt; {
+    const modelName = require('inflection').classify(req.params.resource)
+    // 解析req.params.resource的model为大写匹配models定义的名字
+    req.Model = require(`../models/${modelName}`)
+    // 挂载到req上， 让以后的操作找到models的名字
+    next()
+  }
+}
+
+、
+  const resourceMiddleware = require('../../middleware/resource')
+  app.use('/admin/api/rest/:resource',  resourceMiddleware(), router)
+  
+  //'/admin/api/rest/:resource' =&gt; 动态传入路径，
+
+router.post('/', async (req, res) =&gt; {
+    const model = await req.Model.create(req.body)
+    res.send(model)
+  })
+</code></pre></div><ol><li>前端的相同的业务逻辑比如上传数据， 创建数据，</li> <li>后端统一接口， 解析req 的model, 动态调用mongoose创造的model去创建数据。</li></ol></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/javascript/Regular.html" class="prev">regular expression</a></span> <span class="next"><a href="/javascript/发布与部署.html">发布和部署 (阿里云)</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.4ed34284.js" defer></script><script src="/assets/js/2.179fc952.js" defer></script><script src="/assets/js/36.cab101c8.js" defer></script>
+  </body>
+</html>
